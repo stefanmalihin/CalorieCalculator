@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+<h2>Calorie Calculator</h2>
+<p>Fill in the form and click the button to get the results</p>
+<form action="/calorie_form_page" method="post">
+    {{calorieForm.sex.label}} {{calorieForm.sex}}
+    <br>
+    <p>
+    For male type in 'M'<br>
+    For female type in 'F'
+    </p>
+    <br>
+    {{calorieForm.age.label}} {{calorieForm.age}}
+    <br>
+    {{calorieForm.weight.label}} {{calorieForm.weight}}
+    <br>
+    {{calorieForm.height.label}} {{calorieForm.height}}
+    <br>
+    {{calorieForm.country.label}} {{calorieForm.country}}
+    <br>
+    {{calorieForm.city.label}} {{calorieForm.city}}
+    <br>
+    {{calorieForm.button}}
+    <hr>
+    {% if result %}
+    Your calorie intake should be {{calorieneed}} per day.
+    {% endif %}
+</form>
+
+</body>
+</html>
